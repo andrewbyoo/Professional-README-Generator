@@ -26,6 +26,9 @@ function generateMarkdown(data) {
 - [Deployed Web Visual](#deployed-web-visual)
 - [Credits](#credits)
 - [License](#license)
+- [Features](#features)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
 
 ## Installation
 
