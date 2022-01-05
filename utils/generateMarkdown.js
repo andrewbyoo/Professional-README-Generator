@@ -52,8 +52,6 @@ ${renderLicenseBadge()}
 ## How to Contribute
 
 
-## Tests
-
 `;
 }
 
