@@ -46,12 +46,12 @@ Run the command \`git clone\` with the copied HTTPS or SSH link.${renderAddition
 ## Usage
 ${data.visual}
 ![alt text](enter committed web visual file path here)${renderLicenseSection(data.license)}${renderFeaturesList(data.features)}${renderContributing(data.contributing)}
-${data.contact}
 
 ## Tests
 
 
-## Questions`;
+## Questions
+If you have questions, you can visit my GitHub page at [${data.username}](https://github.com/${data.username}) or email me at [${data.email}](mailto:${data.email}).`;
 }
 
 module.exports = { generateMarkdown };
