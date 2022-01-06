@@ -4,12 +4,16 @@ const renderCreditsLink = credits => (credits != '') ? '\n- [Credits](#credits)'
 
 const renderCreditsSection = credits => (credits != '') ? '\n## Credits\n' + credits : ''
 
+const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : ''
+
 // Returns the license table of contents link. If there is no license, returns an empty string.
 const renderLicenseLink = license => (license != '') ? '\n- [License](#license)' : ''
 
 // TODO: Add change the link so that the user can choose a badge color once a badge color question is added to the index.js
 // Returns license section header and badge. If there is no license, return an empty string.
 const renderLicenseSection = license => (license != '') ? '\n\n## License\n[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : ''
+
+const renderFeaturesLink = features => (features != '') ? '\n- [Features](#features)' : ''
 
 const renderFeaturesList = features => {
   if (features != '') {
@@ -24,14 +28,14 @@ const renderFeaturesList = features => {
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
   return `# ${data.title}
+${renderLicenseBadge(data.license)}
 ## Description
 ${data.description}
 ${renderUserStory(data.userStory)}
 
 ## Table of Contents
 - [Installation](#installation)
-- [Deployed Web Visual](#deployed-web-visual)${renderCreditsLink(data.credits)}${renderLicenseLink(data.license)}
-- [Features](#features)
+- [Deployed Web Visual](#deployed-web-visual)${renderCreditsLink(data.credits)}${renderLicenseLink(data.license)}${renderFeaturesLink(data.features)}
 - [How to Contribute](#how-to-contribute)
 
 ## Installation
@@ -49,6 +53,7 @@ ${renderCreditsSection(data.credits)}${renderLicenseSection(data.license)}${rend
 ## How to Contribute
 ${data.contact}
 
+## Tests
 `;
 }
 
