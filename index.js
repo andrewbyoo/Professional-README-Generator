@@ -41,8 +41,13 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'contact',
-    message: 'Write how other developers can contact you to contribute to the project.',
+    name: 'username',
+    message: 'Enter your GitHub username.',
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'Enter your email address.',
   },
 ];
 
