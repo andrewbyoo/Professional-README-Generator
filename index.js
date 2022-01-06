@@ -58,7 +58,9 @@ const writeToFile = data => {
 const init = () => {
   inquirer
     .prompt(questions)
-    .then((response) => module.exports = response)
+  .then(module.exports = answers)
+  .then(writeToFile(generatedREADME))
+  .catch(err => {console.log(err)})
 }
 
 // Function call to initialize app
