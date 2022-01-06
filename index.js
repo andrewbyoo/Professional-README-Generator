@@ -36,6 +36,11 @@ const questions = [
   },
   {
     type: 'input',
+    message: 'Which license are you using?',
+    name: 'license',
+  },
+  {
+    type: 'input',
     message: 'Write a list of features for your project. (Note: Features must be written as an array. e.g. ["Feature 1", "Feature 2", "Feature 3"])',
     name: 'features',
   },
@@ -48,15 +53,16 @@ const questions = [
 
 const writeToFile = data => {
   fs.writeFile('generated-README.md', data, (err) =>
-  err ? console.error(err) : console.log('README has been generated'));
+    err ? console.error(err) : console.log('README has been generated'));
 }
 
 // TODO: Fix initialization function
 const init = () => {
-  inquirer.prompt(questions)
-  .then((response) => writeToFile(generateMarkdownJS.generateMarkdown(response)))
-  .catch(err => {console.log(err)})
-}
+  inquirer
+    .prompt(questions)
+    .then((response) => writeToFile(generateMarkdownJS.generateMarkdown(response)))
+    .catch(err => { console.log(err) });
+};
 
 // Function call to initialize app
 init();
