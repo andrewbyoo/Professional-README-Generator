@@ -1,10 +1,8 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
-const async = require('async');
 const inquirer = require('inquirer');
 const generatedREADME = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// TODO: Add question for license badge color
 const questions = [
   {
     type: 'input',
@@ -48,13 +46,12 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
 const writeToFile = data => {
   fs.writeFile('generated-README.md', data, (err) =>
   err ? console.error(err) : console.log('README has been generated'));
 }
 
-// TODO: Create a function to initialize app
+// TODO: Fix initialization function
 const init = () => {
   inquirer
     .prompt(questions)
