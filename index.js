@@ -2,7 +2,7 @@
 const fs = require('fs');
 const async = require('async');
 const inquirer = require('inquirer');
-const generatedREADME = require('./utils/generateMarkdown');
+const generatedREADME = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -49,13 +49,13 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
+const writeToFile = data => {
+  fs.writeFile('generated-README.md', data, (err) =>
   err ? console.error(err) : console.log('README has been generated'));
 }
 
 // TODO: Create a function to initialize app
-function init() {
+const init = () => {
   inquirer
     .prompt(questions)
     .then((response) => module.exports = response)
