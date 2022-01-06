@@ -1,5 +1,3 @@
-const pulledData = require('../index.js')
-
 // TODO: Add change the link so that the user can choose a badge color once a badge color question is added to the index.js
 // Creates a license badge that links to the license file in the repo. If there is no license, return an empty string.
 const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : element.dispatchEvent(new KeyboardEvent('keydown', {'key':'delete'}));
@@ -45,7 +43,6 @@ ${renderLicenseBadge(data.license)}
 
 
 ## Features
-${renderFeatureList(data.features)}
 
 ## How to Contribute
 ${data.contact}
@@ -53,4 +50,8 @@ ${data.contact}
 `;
 }
 
-module.exports = generateMarkdown(pulledData);
+module.exports = {generateMarkdown};
+
+
+// Features code
+// ${renderFeatureList(data.features)}
