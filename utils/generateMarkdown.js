@@ -2,10 +2,6 @@ const renderUserStory = userStory => (userStory != '') ? '\n\n## User Story\n\`\
 
 const renderAdditionalInstructions = installation => (installation != '') ? '\n' + installation : ''
 
-const renderCreditsLink = credits => (credits != '') ? '\n- [Credits](#credits)' : ''
-
-const renderCreditsSection = credits => (credits != '') ? '\n\n## Credits\n' + credits : ''
-
 const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : ''
 
 // Returns the license table of contents link. If there is no license, returns an empty string.
@@ -27,6 +23,8 @@ const renderFeaturesList = features => {
   }
 }
 
+const renderContributing = contributing => (contributing) ? '\n\n## Contributing\n[link](./contributing.md)' : ''
+
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
   return `# ${data.title}
@@ -36,8 +34,8 @@ ${data.description}${renderUserStory(data.userStory)}
 
 ## Table of Contents
 - [Installation](#installation)
-- [Deployed Web Visual](#deployed-web-visual)${renderCreditsLink(data.credits)}${renderLicenseLink(data.license)}${renderFeaturesLink(data.features)}
-- [How to Contribute](#how-to-contribute)
+- [Usage](#usage)${renderLicenseLink(data.license)}${renderFeaturesLink(data.features)}
+- [Contributing](#contributing)
 
 ## Installation
 To get the app on your local machine:
@@ -45,15 +43,15 @@ Click on the code button on the repo.
 Copy the HTTPS or SSH link.
 Run the command \`git clone\` with the copied HTTPS or SSH link.${renderAdditionalInstructions(data.installation)}
 
-## Deployed Web Visual
+## Usage
 ${data.visual}
-![alt text](enter committed web visual file path here)${renderCreditsSection(data.credits)}${renderLicenseSection(data.license)}${renderFeaturesList(data.features)}
-
-## How to Contribute
+![alt text](enter committed web visual file path here)${renderLicenseSection(data.license)}${renderFeaturesList(data.features)}${renderContributing(data.contributing)}
 ${data.contact}
 
 ## Tests
-`;
+
+
+## Questions`;
 }
 
 module.exports = { generateMarkdown };
