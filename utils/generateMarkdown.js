@@ -2,15 +2,15 @@ const pulledData = require('../index.js')
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const renderLicenseBadge = license => {}
+const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : ''
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-const renderLicenseLink = license => {}
+const renderLicenseLink = license => (license != '') ? '- [License](#license)' : ''
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-const renderLicenseSection = license => {}
+const renderLicenseSection = license => (license != '') ? '## License' : ''
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
