@@ -1,6 +1,8 @@
+const renderUserStory = userStory => (userStory != '') ? '\n## User Story\n\`\`\`\n' + userStory + '\n\`\`\`\n' : ''
+
 // TODO: Add change the link so that the user can choose a badge color once a badge color question is added to the index.js
 // Creates a license badge that links to the license file in the repo. If there is no license, return an empty string.
-const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : element.dispatchEvent(new KeyboardEvent('keydown', {'key':'delete'}));
+const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : '';
 
 // Returns the license table of contents link. If there is no license, returns an empty string.
 const renderLicenseLink = license => (license != '') ? '- [License](#license)' : ''
@@ -13,12 +15,7 @@ const generateMarkdown = data => {
   return `# ${data.title}
 ## Description
 ${data.description}
-
-## User Story
-\`\`\`
-${data.userStory}
-\`\`\`
-
+${renderUserStory(data.userStory)}
 ## Table of Contents
 - [Installation](#installation)
 - [Deployed Web Visual](#deployed-web-visual)
