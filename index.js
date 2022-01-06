@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdownJS = require('./utils/generateMarkdown.js');
 
 // TODO: Add question for license badge color
 const questions = [
@@ -53,10 +53,8 @@ const writeToFile = data => {
 
 // TODO: Fix initialization function
 const init = () => {
-  inquirer
-    .prompt(questions)
-  .then((answers) => module.exports = answers)
-  .then(writeToFile(generateMarkdown))
+  inquirer.prompt(questions)
+  .then((response) => writeToFile(generateMarkdownJS.generateMarkdown(response)))
   .catch(err => {console.log(err)})
 }
 
