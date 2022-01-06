@@ -1,15 +1,13 @@
 const pulledData = require('../index.js')
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// TODO: Add change the link so that the user can choose a badge color once a badge color question is added to the index.js
+// Creates a license badge that links to the license file in the repo. If there is no license, return an empty string.
 const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : ''
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Returns the license table of contents link. If there is no license, returns an empty string.
 const renderLicenseLink = license => (license != '') ? '- [License](#license)' : ''
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Returns license section header. If there is no license, return an empty string
 const renderLicenseSection = license => (license != '') ? '## License' : ''
 
 // TODO: Create a function to generate markdown for README
