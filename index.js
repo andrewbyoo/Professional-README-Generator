@@ -6,48 +6,48 @@ const generateMarkdownJS = require('./utils/generateMarkdown.js');
 const questions = [
   {
     type: 'input',
-    message: 'What is the name of your project?',
     name: 'title',
+    message: 'What is the name of your project?',
   },
   {
     type: 'input',
-    message: 'Write a description for your project.',
     name: 'description',
+    message: 'Write a description for your project.',
   },
   {
     type: 'input',
-    message: 'Write a user story for your project.',
     name: 'userStory',
+    message: 'Write a user story for your project.',
   },
   {
     type: 'input',
-    message: 'Write the installation instructions for your project. (Note: Generated README will already include the instructions to clone the repo.)',
     name: 'installation',
+    message: 'Write the installation instructions for your project. (Note: Generated README will already include the instructions to clone the repo.)',
   },
   {
     type: 'input',
-    message: 'Write a description of your planned web visual. (Note: After README is generated, please go back to edit the visual alt tag and visual link.)',
     name: 'visual',
+    message: 'Write a description of your planned web visual. (Note: After README is generated, please go back to edit the visual alt tag and visual link.)',
   },
   {
     type: 'input',
-    message: 'Write any contributors to your project and their contact information.',
     name: 'credits',
+    message: 'Write any contributors to your project and their contact information.',
   },
   {
     type: 'input',
-    message: 'Which license are you using?',
     name: 'license',
+    message: 'Which license are you using?',
   },
   {
     type: 'input',
-    message: 'Write a list of features for your project. (Note: Features must be written as an array. e.g. ["Feature 1", "Feature 2", "Feature 3"])',
     name: 'features',
+    message: 'Write a list of features for your project. (Note: Features must be written as an array. e.g. ["Feature 1", "Feature 2", "Feature 3"])',
   },
   {
     type: 'input',
-    message: 'Write how other developers can contact you to contribute to the project.',
     name: 'contact',
+    message: 'Write how other developers can contact you to contribute to the project.',
   },
 ];
 
