@@ -42,7 +42,7 @@ const questions = [
   {
     type: 'input',
     name: 'features',
-    message: 'Write a list of features for your project. (Note: Features must be written as an array. e.g. ["Feature 1", "Feature 2", "Feature 3"])',
+    message: 'Write a list of features for your project. (Note: Features must be separated with a & symbol and spaces. [e.g. Feature 1 & Feature 2 & Feature 3]',
   },
   {
     type: 'input',
