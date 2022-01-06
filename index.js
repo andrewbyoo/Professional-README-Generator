@@ -31,11 +31,6 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'credits',
-    message: 'Write any contributors to your project and their contact information.',
-  },
-  {
-    type: 'input',
     name: 'license',
     message: 'Which license are you using?',
   },
