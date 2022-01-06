@@ -14,41 +14,41 @@ const renderLicenseSection = license => (license != '') ? '## License' : ''
 const generateMarkdown = data => {
   return `# ${data.title}
 ## Description
-
+${data.description}
 
 ## User Story
 \`\`\`
-
+${data.userStory}
 \`\`\`
 
 ## Table of Contents
 - [Installation](#installation)
 - [Deployed Web Visual](#deployed-web-visual)
 - [Credits](#credits)
-${renderLicenseLink()}
+${renderLicenseLink(data.license)}
 - [Features](#features)
 - [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
 
 ## Installation
-
+${data.installation}
 
 ## Deployed Web Visual
-
+${data.visual}
 ![alt text](enter committed web visual file path here)
 
 ## Credits
+${data.credits}
 
-
-${renderLicenseSection()}
-${renderLicenseBadge()}
+${renderLicenseSection(data.license)}
+${renderLicenseBadge(data.license)}
 
 
 ## Features
-
+${renderFeatureList(data.features)}
 
 ## How to Contribute
-
+${data.contact}
 
 `;
 }
