@@ -12,22 +12,22 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: 'Write a description for your project.',
+    message: 'Enter a description for your project:',
   },
   {
     type: 'input',
     name: 'userStory',
-    message: 'Write a user story for your project.',
+    message: 'Enter a user story for your project:',
   },
   {
     type: 'input',
     name: 'installation',
-    message: 'Write the installation instructions for your project. (Note: Generated README will already include the instructions to clone the repo.)',
+    message: 'Enter the installation instructions for your project: (Note: Generated README will already include the instructions to clone the repo)',
   },
   {
     type: 'input',
     name: 'visual',
-    message: 'Write a description of your planned web visual. (Note: After README is generated, please go back to edit the visual alt tag and visual link.)',
+    message: 'Enter a description of your planned web visual: (Note: After README is generated, please go back to edit the visual alt tag and visual link)',
   },
   {
     type: 'list',
@@ -44,7 +44,7 @@ const questions = [
   {
     type: 'input',
     name: 'features',
-    message: 'Write a list of features for your project. (Note: Features must be separated with a & symbol and spaces. [e.g. Feature 1 & Feature 2 & Feature 3])',
+    message: 'Enter a list of features for your project: (Note: Features must be separated with an & symbol and spaces [e.g. Feature 1 & Feature 2 & Feature 3])',
   },
   {
     type: 'list',
@@ -54,13 +54,18 @@ const questions = [
   },
   {
     type: 'input',
+    name: 'tests',
+    message: 'Enter the tests performed:',
+  },
+  {
+    type: 'input',
     name: 'username',
-    message: 'Enter your GitHub username.',
+    message: 'Enter your GitHub username:',
   },
   {
     type: 'input',
     name: 'email',
-    message: 'Enter your email address.',
+    message: 'Enter your email address:',
   },
 ];
 
