@@ -26,7 +26,7 @@ const renderFeaturesList = features => {
   }
 }
 
-const renderContributing = contributing => (contributing) ? '\n\n## Contributing\nWhen contributing to this repository, please contact the owner through either opening an issue or emailing before making a change.\n\n### Pull Requests\n1. Update the README.md with details of the changes made.\n2. Contact another developer on the project to review your pull request.\n3. Merge the pull request after it has been reviewed and approved. If you do not have merge access, contact another developer to merge the pull request.' : ''
+const renderContributing = contributing => (contributing == 'Yes') ? '\n\n## Contributing\nWhen contributing to this repository, please contact the owner through either opening an issue or emailing before making a change.\n\n### Pull Requests\n1. Update the README.md with details of the changes made.\n2. Contact another developer on the project to review your pull request.\n3. Merge the pull request after it has been reviewed and approved. If you do not have merge access, contact another developer to merge the pull request.' : ''
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
