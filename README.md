@@ -26,7 +26,9 @@ In your local repo, run the command `npm i`.
 ## Usage
 The visual shows what occurs when the program is started, the process of answering the prompts, and the output of the program for sample-README.md.
 
-![Video of the creation of sample-README.md](./assets/images/README-generator-visual.mov)
+![sample-README.md static visual](./assets/images/static-visual1.png)
+
+Please click [here](https://youtu.be/MLFwCM4-PzA) for a video demo.
 
 ## License
 This application is covered under the MIT license.
