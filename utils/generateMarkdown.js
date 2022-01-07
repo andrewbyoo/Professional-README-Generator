@@ -26,7 +26,9 @@ const renderFeaturesList = features => {
   }
 }
 
-const renderContributing = contributing => (contributing == 'Yes') ? '\n\n## Contributing\nWhen contributing to this repository, please contact the owner through either opening an issue or emailing before making a change.\n\n### Pull Requests\n1. Update the README.md with details of the changes made.\n2. Contact another developer on the project to review your pull request.\n3. Merge the pull request after it has been reviewed and approved. If you do not have merge access, contact another developer to merge the pull request.' : ''
+const renderContributingSection = contributing => (contributing == 'Yes') ? '\n\n## Contributing\nWhen contributing to this repository, please contact the owner through either opening an issue or emailing before making a change.\n\n### Pull Requests\n1. Update the README.md with details of the changes made.\n2. Contact another developer on the project to review your pull request.\n3. Merge the pull request after it has been reviewed and approved. If you do not have merge access, contact another developer to merge the pull request.' : ''
+
+const renderTestsSection = tests => (tests != '') ? '\n\n## Tests\n' + tests : ''
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
@@ -49,10 +51,7 @@ Run the command \`git clone\` with the copied HTTPS or SSH link.${renderAddition
 ## Usage
 ${data.visual}
 
-![alt text](enter committed web visual file path here)${renderLicenseSection(data.license)}${renderFeaturesList(data.features)}${renderContributing(data.contributing)}
-
-## Tests
-
+![alt text](enter committed web visual file path here)${renderLicenseSection(data.license)}${renderFeaturesList(data.features)}${renderContributingSection(data.contributing)}${renderTestsSection(data.tests)}
 
 ## Questions
 To view more of my projects, you can visit my GitHub page at [${data.username}](https://github.com/${data.username}).
