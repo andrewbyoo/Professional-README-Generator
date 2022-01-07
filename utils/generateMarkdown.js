@@ -1,15 +1,18 @@
+// If any of the prompts that pertain to the follow functions were left blank, return an empty string
+// Returns user story in a code block
 const renderUserStory = userStory => (userStory != '') ? '\n\n## User Story\n\`\`\`\n' + userStory + '\n\`\`\`' : ''
 
+// Returns additional installation instructions
 const renderAdditionalInstructions = installation => (installation != '') ? '\n' + installation : ''
 
-const renderLicenseBadge = license => (license != '') ? '[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE)' : ''
+// Returns license badge
+const renderLicenseBadge = (license, badgeColor) => (license != 'Unlicensed') ? '[![license](https://img.shields.io/badge/license-' + license + '-' + badgeColor + ')](./LICENSE)' : ''
 
-// Returns the license table of contents link. If there is no license, returns an empty string.
-const renderLicenseLink = license => (license != '') ? '\n- [License](#license)' : ''
+// Returns the license table of contents link
+const renderLicenseLink = license => (license != 'Unlicensed') ? '\n- [License](#license)' : ''
 
-// TODO: Add change the link so that the user can choose a badge color once a badge color question is added to the index.js
-// Returns license section header and badge. If there is no license, return an empty string.
-const renderLicenseSection = license => (license != '') ? '\n\n## License\nThis application is covered under the ' + license + ' license.' : ''
+// Returns license section header and badge
+const renderLicenseSection = license => (license != 'Unlicensed') ? '\n\n## License\nThis application is covered under the ' + license + ' license.' : ''
 
 const renderFeaturesLink = features => (features != '') ? '\n- [Features](#features)' : ''
 
@@ -28,7 +31,7 @@ const renderContributing = contributing => (contributing) ? '\n\n## Contributing
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
   return `# ${data.title}
-${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license, data.badgeColor)}
 ## Description
 ${data.description}${renderUserStory(data.userStory)}
 
