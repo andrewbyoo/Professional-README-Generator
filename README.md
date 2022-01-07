@@ -24,9 +24,9 @@ Run the command `git clone` with the copied HTTPS or SSH link.
 In your local repo, run the command `npm i`.
 
 ## Usage
-The visual shows what occurs when the program is started, the process of answering the prompts, and the output of the program.
+The visual shows what occurs when the program is started, the process of answering the prompts, and the output of the program for sample-README.md.
 
-![alt text](enter committed web visual file path here)
+![Video of the creation of sample-README.md](./assets/images/README-generator-visual.mov)
 
 ## License
 This application is covered under the MIT license.
