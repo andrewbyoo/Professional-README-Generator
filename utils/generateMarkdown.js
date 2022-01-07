@@ -43,7 +43,7 @@ ${data.description}${renderUserStory(data.userStory)}
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)${renderLicenseLink(data.license)}${renderFeaturesLink(data.features)}${renderContributingLink()}${renderTestsLink}
+- [Usage](#usage)${renderLicenseLink(data.license)}${renderFeaturesLink(data.features)}${renderContributingLink(data.contributing)}${renderTestsLink(data.tests)}
 - [Questions](#questions)
 
 ## Installation
