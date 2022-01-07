@@ -8,14 +8,16 @@ const renderAdditionalInstructions = installation => (installation != '') ? '\n'
 // Returns license badge
 const renderLicenseBadge = (license, badgeColor) => (license != 'Unlicensed') ? '[![license](https://img.shields.io/badge/license-' + license + '-' + badgeColor + ')](./LICENSE)' : ''
 
-// Returns the license table of contents link
+// Returns license table of contents link
 const renderLicenseLink = license => (license != 'Unlicensed') ? '\n- [License](#license)' : ''
 
 // Returns license section header and badge
 const renderLicenseSection = license => (license != 'Unlicensed') ? '\n\n## License\nThis application is covered under the ' + license + ' license.' : ''
 
+// Returns features table of contents link
 const renderFeaturesLink = features => (features != '') ? '\n- [Features](#features)' : ''
 
+// If the user input the features in the format the prompt stated, splits the features and returns feature section header and list
 const renderFeaturesList = features => {
   if (features != '') {
     const featurePrep = '\n\n## Features\n- ' + features;
@@ -26,15 +28,20 @@ const renderFeaturesList = features => {
   }
 }
 
+// Returns contributing table of contents link
 const renderContributingLink = contributing => (contributing == 'Yes') ? '\n- [Contributing](#contributing)' : ''
 
+// Returns contributing section headers and content
 const renderContributingSection = contributing => (contributing == 'Yes') ? '\n\n## Contributing\nWhen contributing to this repository, please contact the owner by opening an issue or sending an emailing before making a change.\n\n### Pull Requests\n1. Update the README.md with details of the changes made.\n2. Contact another developer on the project to review your pull request.\n3. Merge the pull request after it has been reviewed and approved. If you do not have merge access, contact another developer to merge the pull request.' : ''
 
+// Returns tests table of contents link
 const renderTestsLink = tests => (tests != '') ? '\n- [Tests](#tests)' : ''
 
+// Returns tests section header and content
 const renderTestsSection = tests => (tests != '') ? '\n\n## Tests\n' + tests : ''
 
-// TODO: Create a function to generate markdown for README
+// Function to pull response data from the prompts to create a markdown
+// Formatting on certain markdown elements were necessary to be in-line because if optional prompts were omitted, this formatting will ensure there are no unnecessary line breaks in the generated README
 const generateMarkdown = data => {
   return `# ${data.title}
 ${renderLicenseBadge(data.license, data.badgeColor)}
