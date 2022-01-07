@@ -33,18 +33,24 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'Which license are you using?',
-    choices: ['Unlicensed', 'Apache', 'cc0-1.0', 'GPLv2', 'GPLv3', 'MIT']
+    choices: ['Unlicensed', 'Apache', 'cc0-1.0', 'GPLv2', 'GPLv3', 'MIT'],
   },
   {
     type: 'list',
     name: 'badgeColor',
     message: 'What color would you like your license badge to be? (Note: If your repo is unlicense, choose any color as a badge will not be generated)',
-    choices: ['blue', 'brightgreen', 'green', 'lightgrey', 'orange', 'red', 'yellow', 'yellowgreen']
+    choices: ['blue', 'brightgreen', 'green', 'lightgrey', 'orange', 'red', 'yellow', 'yellowgreen'],
   },
   {
     type: 'input',
     name: 'features',
     message: 'Write a list of features for your project. (Note: Features must be separated with a & symbol and spaces. [e.g. Feature 1 & Feature 2 & Feature 3])',
+  },
+  {
+    type: 'list',
+    name: 'contributing',
+    message: 'Will this project be open to contributions?',
+    choices: ['No', 'Yes'],
   },
   {
     type: 'input',
