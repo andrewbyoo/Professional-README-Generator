@@ -9,7 +9,7 @@ const renderLicenseLink = license => (license != '') ? '\n- [License](#license)'
 
 // TODO: Add change the link so that the user can choose a badge color once a badge color question is added to the index.js
 // Returns license section header and badge. If there is no license, return an empty string.
-const renderLicenseSection = license => (license != '') ? '\n\n## License\n[![license](https://img.shields.io/badge/license-' + license + '-blue)](./LICENSE) This application is covered under the ' + license + ' license.' : ''
+const renderLicenseSection = license => (license != '') ? '\n\n## License\nThis application is covered under the ' + license + ' license.' : ''
 
 const renderFeaturesLink = features => (features != '') ? '\n- [Features](#features)' : ''
 
@@ -45,6 +45,7 @@ Run the command \`git clone\` with the copied HTTPS or SSH link.${renderAddition
 
 ## Usage
 ${data.visual}
+
 ![alt text](enter committed web visual file path here)${renderLicenseSection(data.license)}${renderFeaturesList(data.features)}${renderContributing(data.contributing)}
 
 ## Tests
