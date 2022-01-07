@@ -33,7 +33,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'Which license are you using?',
-    choices: ['Unlicense', 'Apache', 'cc0-1.0', 'GPLv2', 'GPLv3', 'MIT']
+    choices: ['Unlicensed', 'Apache', 'cc0-1.0', 'GPLv2', 'GPLv3', 'MIT']
   },
   {
     type: 'list',
