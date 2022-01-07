@@ -2,7 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdownJS = require('./utils/generateMarkdown.js');
 
-// TODO: Add question for license badge color
+// Questions to be used in the inquirer prompts
 const questions = [
   {
     type: 'input',
@@ -69,12 +69,13 @@ const questions = [
   },
 ];
 
+// Creates the README
 const writeToFile = data => {
   fs.writeFile('generated-README.md', data, (err) =>
     err ? console.error(err) : console.log('README has been generated!'));
 }
 
-// TODO: Fix initialization function
+// Function that prompts users and uses the response to prepare the markdown
 const init = () => {
   inquirer
     .prompt(questions)
